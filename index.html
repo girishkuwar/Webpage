@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="validation.css" />
+    <script src="validation.js"></script>
+    <title>Document</title>
+</head>
+
+<body onload="firstfocus()">
+    <h1>Javascript Field Label Form Validation using a registration form</h1>
+    <h2>Use tab key or mouse to go next field</h2>
+    <form action="submit">
+        <ul>
+            <li><label for="userid">Student id [3 to 5 character] :</label></li>
+            <li>
+                <input type="text" name="userid" id="userid" size="12" onblur="userid_validation(3,5)" />
+            </li>
+            <li><label for="passid">Password [5 to 10 character ] :</label></li>
+            <li>
+                <input type="password" name="passid" id="" size="12" onblur="passid_validation(5,10)" />
+            </li>
+            <li>
+                <label for="username">Student First Name [Alphabates character] :</label>
+            </li>
+            <li>
+                <input type="text" name="userfname" id="" size="50" onblur="allLetter1()" />
+            </li>
+            <li>
+                <label for="username">Student Last Name [Alphabates character] :</label>
+            </li>
+            <li>
+                <input type="text" name="userlname" id="" size="50" onblur="allLetter2()" />
+            </li>
+
+            <li><label for="username">Student Age [18 to 50 ] :</label></li>
+            <li>
+                <input type="text" name="age" id="" size="50" onblur="age_validation(18,50)" />
+            </li>
+
+            <li><label for="username">DOB [Numbers only] :</label></li>
+            <li>
+                <input type="date" name="date1" size="50" onblur="Validitydate(date1)" />
+            </li>
+
+            <li><label for="username">Address [alphanumeric characters] :</label></li>
+            <li>
+                <input type="text" name="address" size="50" onblur="alphanumeric()" />
+            </li>
+
+            <li><label for="country">Country [Must select a country] :</label></li>
+            <li>
+                <select name="country" id="" onblur="countryselect()">
+                    <option value="Default" selected="">(Please Select a country)</option>
+                    <option value="AF">Australia</option>
+                    <option value="AL">Canada</option>
+                    <option value="DZ">India</option>
+                    <option value="AS">Russia</option>
+                    <option value="AD">USA</option>
+                </select>
+            </li>
+
+            <li><label for="zip">ZIP code [numeric characters] :</label></li>
+            <li><input type="text" name="zip" id="" onblur="allnumeric()" /></li>
+            <li><label for="email">Email [Valid email] :</label></li>
+            <li>
+                <input type="text" name="email" size="50" onblur="ValidateEmail()" />
+            </li>
+
+            <li><label for="">Language [optional]</label></li>
+            <li>
+                <input type="checkbox" name="en" value="en" checked /><span>English</span>
+            </li>
+            <li>
+                <input type="checkbox" name="noen" value="noen" /><span>Non-English</span>
+            </li>
+
+            <li><label for="desc">About [optional]</label></li>
+            <li><textarea name="desc" id="desc" cols="30" rows="10"></textarea></li>
+
+            <li>
+                <input type="submit" name="submit" id="" value="submit" onclick="alert('form submited')" />
+            </li>
+        </ul>
+</body>
+
+</html>
